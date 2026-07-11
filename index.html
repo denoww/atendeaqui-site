@@ -232,10 +232,15 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
 .caixa-top{padding:16px 18px;border-bottom:1px solid var(--fio);display:flex;align-items:center;justify-content:space-between;gap:10px}
 .caixa-top .tt{font-size:15px;font-weight:600;letter-spacing:-.015em}
 .caixa-top .ct{font-size:12px;color:var(--tinta-2);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.abas{display:flex;gap:2px;padding:8px 10px 0;border-bottom:1px solid var(--fio)}
+/* as 3 abas mal cabem nos 302px da coluna: nowrap + scroll suave no extremo, e o
+   sublinhado do ativo é box-shadow inset (margem negativa seria cortada pelo overflow) */
+.abas{display:flex;gap:2px;padding:8px 8px 0;border-bottom:1px solid var(--fio);
+  overflow-x:auto;scrollbar-width:none}
+.abas::-webkit-scrollbar{display:none}
 .aba{
+  flex:0 0 auto;
   font-family:inherit;background:none;border:0;cursor:pointer;color:var(--tinta-2);
-  font-size:12.5px;font-weight:500;letter-spacing:-.005em;padding:8px 9px 10px;white-space:nowrap;
+  font-size:12px;font-weight:500;letter-spacing:-.008em;padding:8px 7px 10px;white-space:nowrap;
   transition:color .1s linear
 }
 .aba:hover{color:var(--tinta)}
@@ -350,8 +355,10 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
 @media(max-width:900px){
   .caixa{grid-template-columns:1fr;min-height:0;border-radius:22px}
   .caixa-col{border-right:0;border-bottom:1px solid var(--fio)}
-  .convs{max-height:252px}
-  .msgs{max-height:320px}
+  /* sem scroll interno na lista: um max-height em px corta um card no meio e
+     parece defeito. A página inteira rola — a lista mostra os cards completos. */
+  .convs{max-height:none;overflow:visible}
+  .msgs{max-height:340px}
   .th-acts .some{display:none}
 }
 
