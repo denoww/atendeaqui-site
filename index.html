@@ -355,10 +355,11 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
 @media(max-width:900px){
   .caixa{grid-template-columns:1fr;min-height:0;border-radius:22px}
   .caixa-col{border-right:0;border-bottom:1px solid var(--fio)}
-  /* sem scroll interno na lista: um max-height em px corta um card no meio e
-     parece defeito. A página inteira rola — a lista mostra os cards completos. */
+  /* Nenhum contêiner de scroll na trajetória do dedo (mesma lição do espectro):
+     lista e thread rolavam por dentro, e o gesto de rolar a PÁGINA era engolido
+     por elas. No mobile as duas crescem por inteiro e quem rola é a página. */
   .convs{max-height:none;overflow:visible}
-  .msgs{max-height:340px}
+  .msgs{max-height:none;overflow:visible}
   .th-acts .some{display:none}
 }
 
@@ -450,14 +451,20 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
 .setor:hover img{transform:scale(1.05)}
 .setor::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 54%, rgba(0,0,0,.66))}
 .setor span{position:absolute;left:24px;bottom:22px;z-index:2;color:#fff;font-size:21px;font-weight:600;letter-spacing:.011em}
+/* No mobile isto era um carrossel horizontal (70vw + scroll-snap x mandatory).
+   Os cards têm ~600px de altura, então o dedo subia SEMPRE em cima de um contêiner
+   de scroll horizontal: o Chrome no Android ficava decidindo entre rolar a página
+   ou o carrossel, e o gesto diagonal prendia no snap — a página "travava".
+   São 4 fotos. Grade 2x2 mostra todas de uma vez, sem gesto concorrente.
+   (mesmo bug e mesmo conserto do baterponto-site, commit a3c68ee) */
 @media(max-width:900px){
-  .espectro{grid-template-columns:repeat(4,70vw);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
-    scroll-padding-inline:calc((100vw - var(--largura))/2);
-    padding-inline:calc((100vw - var(--largura))/2);
-    margin-inline:calc((100vw - var(--largura))/-2);
-    scrollbar-width:none}
-  .espectro::-webkit-scrollbar{display:none}
-  .setor{scroll-snap-align:start}
+  .espectro{grid-template-columns:repeat(2,1fr);gap:12px}
+  .setor{border-radius:20px}
+  .setor span{left:14px;bottom:12px;font-size:16px}
+}
+@media(max-width:420px){
+  .espectro{gap:10px}
+  .setor span{font-size:15px}
 }
 
 /* ---------- PAINEL ---------- */
