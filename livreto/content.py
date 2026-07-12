@@ -11,10 +11,12 @@ FONTE DA VERDADE, nesta ordem:
   3. o backend, no ERP SeuCondomínio (módulo `atendimento_humano`)
 
 REGRA DE OURO DO CONTEÚDO: **nunca vender roadmap como pronto.**
-O ROADMAP (2026-07-11) diz: ondas 0,1,2,3,5 ✅ feitas e deployadas; falta a Onda 4
-(push), e o app do atendente NÃO está publicado na loja. Por isso:
+Estado (2026-07-12): ondas 0,1,2,3,4,5 ✅ feitas. O **push já funciona** (ERP PR
+#2302, confirmado na task `web:5998`) — por isso o card "sem push" SAIU do capítulo
+de honestidade. Mas o **app ainda não está publicado na loja**. Por isso:
   - a caixa é vendida como ela é: abre no NAVEGADOR (inclusive do celular)
-  - o app na loja fica no capítulo "O que a gente ainda não faz"
+  - o app na loja FICA no capítulo "O que a gente ainda não faz" — sai só quando
+    estiver publicado, não quando estiver pronto
   - nada de prometer Instagram/Messenger (não existe hoje)
 
 REGRAS DE COPY (herdadas do playbook dos livretos):
