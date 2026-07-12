@@ -165,11 +165,10 @@ NAO_FAZ = [
      "Ele resolve o repetido; o resto vira conversa humana. Isso é decisão de produto, não "
      "limitação — robô que insiste faz o cliente repetir.", ""),
     ("O app do atendente não está na loja",
-     "A caixa abre no navegador, inclusive no do celular. O aplicativo está sendo feito — e "
-     "enquanto não estiver publicado, ele não é vendido aqui.", ""),
-    ("Sem notificação push (ainda)",
-     "Como o app não está publicado, não há push no celular. Quem trabalha na caixa aberta vê "
-     "a conversa chegar em tempo real; quem fecha o navegador, não é avisado.", ""),
+     "A caixa abre no navegador, inclusive no do celular. O aplicativo está pronto e já recebe "
+     "notificação, mas ainda não foi publicado — e enquanto não estiver na loja, ele não é "
+     "vendido aqui.", ""),
+
 ]
 
 # ---------------------------------------------------------------- lineup
