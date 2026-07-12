@@ -612,7 +612,18 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
       <a href="#duvidas">Dúvidas</a>
       <a href="/livreto">Livreto</a>
     </nav>
-    <!-- CTA WhatsApp — o número aparece em 4 lugares: nav, hero, preço e CTA final. Buscar por "wa.me". -->
+    <!-- CTA WhatsApp — o número aparece em 4 lugares: nav, hero, preço e CTA final. Buscar por "wa.me".
+
+         ⚠️ NÃO É BUG: se ao clicar o WhatsApp abrir com um texto do *baterponto*, o link
+         aqui está certo. O baterponto usa ESTE MESMO número (5562996701278), e o
+         `wa.me/...?text=` **não sobrescreve um rascunho já existente** na conversa. Quem
+         clicou antes num botão do baterponto ficou com aquele texto como rascunho não
+         enviado, e ele ganha do nosso. Apagar a caixa de texto no WhatsApp e clicar de
+         novo traz o texto certo.
+
+         Decidido (12/07/2026): mantemos o número compartilhado. O preço disso é este
+         rascunho cruzado + o comercial não saber de qual site o lead veio. Se um dia
+         incomodar, a saída é um número por produto. -->
     <a class="nav-cta" href="https://wa.me/5562996701278?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20atendeaqui." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
       WhatsApp
