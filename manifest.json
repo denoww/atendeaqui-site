@@ -1,0 +1,13 @@
+{
+  "name": "atendeaqui",
+  "short_name": "atendeaqui",
+  "description": "Uma caixa de entrada só para WhatsApp, site e Telegram. O robô resolve o repetido; o time assume com a conversa inteira já lida.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1A0710",
+  "icons": [
+    { "src": "/assets/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

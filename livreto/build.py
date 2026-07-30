@@ -402,13 +402,13 @@ def build():
     sha = hashlib.sha1(body.encode()).hexdigest()[:7]
     foot = (f'<footer class="foot"><div class="foot-in">'
             f'<span>atendeaqui · atendimento no WhatsApp para empresas · '
-            f'<a href="/privacidade">Privacidade</a></span>'
+            f'<a href="{C.SITE}/privacidade">Privacidade</a></span>'
             f'<span>Livreto v{hoje} · {sha}</span></div></footer>')
 
     desc = ("Livreto do atendeaqui: WhatsApp, chat do site e Telegram numa caixa só. O robô "
             "resolve o repetido e passa o resto pro time com o histórico junto. Copiloto de IA, "
             "transcrição de áudio e painel. R$ 49 por atendente/mês, grátis com 1.")
-    url = f"{C.SITE}/livreto"
+    url = f"{C.SITE}/livreto/"
     head = f'''<!doctype html>
 <html lang="pt-BR">
 <head>
