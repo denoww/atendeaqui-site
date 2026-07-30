@@ -1,1 +1,1 @@
-https://www.seucondominio.com.br/logar?no_layout=true
+https://app.atendeaqui.app/logar?no_layout=true
