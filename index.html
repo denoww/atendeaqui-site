@@ -661,6 +661,151 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
     });
   });
 </script>
+
+<!-- ═══ DADOS ESTRUTURADOS (JSON-LD) ═════════════════════════════════════════
+     O FAQ aqui é EXTRAÍDO do acordeão desta página, não digitado: schema que não
+     bate com o texto visível é a violação clássica de rich result. O guard do CI
+     (.github/workflows/seo.yml) confere cada `name` contra o HTML.
+
+     ⚠️ Expectativa honesta: desde ago/2023 o Google restringiu o rich result de
+     FAQ a site de governo e saúde — NÃO espere accordion na SERP. O que rende
+     aqui é entidade (Organization) e citação em resposta de IA.
+
+     ⛔ aggregateRating e review são PROIBIDOS: estrela fabricada em dado
+     estruturado é motivo de ação manual. ═══════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.atendeaqui.app/#organizacao",
+      "name": "atendeaqui.app",
+      "url": "https://www.atendeaqui.app/",
+      "logo": "https://www.atendeaqui.app/assets/brand-mark.png",
+      "description": "Caixa de entrada compartilhada de WhatsApp: vários atendentes no mesmo número, com setor, transcrição de áudio e transbordo do robô para humano.",
+      "areaServed": "BR",
+      "sameAs": [
+        "https://blog.atendeaqui.app/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+5562985673142",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        }
+      ],
+      "alternateName": "atendeaqui"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.atendeaqui.app/#site",
+      "url": "https://www.atendeaqui.app/",
+      "name": "atendeaqui.app",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://www.atendeaqui.app/#organizacao"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.atendeaqui.app/#aplicativo",
+      "name": "atendeaqui.app",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "pt-BR",
+      "url": "https://www.atendeaqui.app/",
+      "publisher": {
+        "@id": "https://www.atendeaqui.app/#organizacao"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "49.00",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "description": "Por atendente, por mês. Grátis com 1 atendente.",
+        "url": "https://www.atendeaqui.app/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.atendeaqui.app/#faq",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://www.atendeaqui.app/#site"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso trocar o meu número de WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O número que os seus clientes já conhecem continua o mesmo — ele passa a entregar as mensagens na caixa, e a sua equipe responde de lá. Se você tem mais de um número, todos entram na mesma caixa e o filtro por conta separa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O robô é obrigatório?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Dá pra usar só a caixa, com gente respondendo tudo. Quando quiser, você liga o robô em um setor só e vê o que acontece — e ele passa pra um humano na hora em que o assunto sai do roteiro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De onde a IA tira as respostas que sugere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da sua base de conhecimento, escopada no setor da conversa. Ela não inventa a partir da internet: procura o que a sua empresa escreveu, monta um rascunho e deixa na caixa de texto. Quem envia é sempre o atendente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E quando ninguém está online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A conversa não fica no vácuo. Se o setor tiver o robô ligado, ele assume e responde pela base. Se não tiver, ela fica na fila — e é entregue automaticamente ao primeiro atendente que ficar disponível, sem ninguém precisar redistribuir na mão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá pra ver quem está demorando pra responder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dá. Cada setor define o tempo-alvo em três níveis, e a conversa ganha cor quando passa deles — tanto a que espera na fila quanto a que já está em atendimento e ficou sem resposta. No painel isso vira média de 1ª resposta e de atendimento, por pessoa e por setor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O cliente manda áudio. Tenho que ouvir tudo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O áudio chega com a transcrição embaixo do player. Você lê, responde, e o texto ainda serve pra busca e pro relatório de assuntos do mês."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Já uso outro sistema de atendimento. Dá pra migrar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dá — e o melhor caminho é rodar em paralelo por uma semana, com um setor só. Você compara o tempo de resposta e a conta do mês antes de mover o time inteiro. A gente ajuda a configurar sem cobrar por isso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E os dados das conversas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São seus. Você exporta qualquer conversa em PDF, planilha ou texto quando quiser, e as conversas encerradas são arquivadas com download permanente. Por quanto tempo elas continuam dentro do sistema é uma configuração sua."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
