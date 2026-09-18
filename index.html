@@ -657,7 +657,15 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
     if (!a) return;
     gtag('event', 'contato_whatsapp', {
       pagina: location.pathname,
-      cta: a.className || 'sem-classe'
+      cta: a.className || 'sem-classe',
+      // De ONDE veio quem clicou. Medido em 17-18/09/2026: o lead destas marcas
+      // sai por wa.me e o clique e o lead nunca se cruzavam, entao nao dava pra
+      // dizer qual canal traz cliente. So o HOSTNAME: a URL inteira do referrer
+      // pode carregar termo de busca, que e dado de quem visita.
+      origem: (function () {
+        try { return document.referrer ? new URL(document.referrer).hostname : '(direto)'; }
+        catch (e) { return '(desconhecido)'; }
+      })()
     });
   });
 </script>
