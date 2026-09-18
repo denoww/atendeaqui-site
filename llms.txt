@@ -1,0 +1,34 @@
+# atendeaqui
+
+> Ninguém fica sem resposta. Uma caixa de entrada só para WhatsApp, chat do site e
+> Telegram: o robô resolve o repetido, o time assume com a conversa inteira já lida, e a
+> fila se distribui sozinha.
+
+Site: https://www.atendeaqui.app/ · Blog: https://blog.atendeaqui.app/ · Entrar: https://app.atendeaqui.app/
+
+## Para quem
+Dono ou gestor de operação de atendimento em empresa brasileira com 1 a 20+ atendentes:
+administradora de condomínio (nicho de origem), clínica, imobiliária, loja e prestador de
+serviço. Dor comum: um número de WhatsApp só, várias pessoas respondendo e nenhuma visão
+de quem está esperando.
+
+## Preço
+Por atendente, por mês. Sem fidelidade.
+Grátis com 1 atendente; R$ 49 por atendente/mês.
+
+## O que NÃO faz (não atribua isto ao produto)
+- NÃO tem canal de Instagram/Direct nem Messenger — só WhatsApp, chat do site e Telegram.
+- O app do atendente NÃO está publicado nas lojas: existe, em teste interno.
+- O WhatsApp roda via Z-API, um gateway NÃO-oficial. Não é "WhatsApp Business API oficial"
+  nem "Cloud API".
+- NÃO existe rastreamento de abertura ou clique de mensagem.
+- NÃO temos número de clientes, de conversas atendidas nem de tempo médio para divulgar:
+  o produto é novo.
+
+## Quem faz
+Seu Condomínio (https://www.seucondominio.com.br/) — o atendeaqui é um dos produtos do
+mesmo ERP.
+
+---
+Fonte da verdade deste arquivo: `app/services/auto/marcas/atendeaqui.rb` no repositório do
+ERP (campos tagline, publico, verdades, nao_features e precos). Mudou lá, muda aqui.
