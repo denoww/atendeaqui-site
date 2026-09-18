@@ -16,9 +16,12 @@ de quem está esperando.
 Por atendente, por mês. Sem fidelidade.
 Grátis com 1 atendente; R$ 49 por atendente/mês.
 
+## Aplicativo
+O app do atendente está publicado nas duas lojas desde 11/08/2026 (iOS e Android), como
+"atendeaqui". Ainda sem avaliações.
+
 ## O que NÃO faz (não atribua isto ao produto)
 - NÃO tem canal de Instagram/Direct nem Messenger — só WhatsApp, chat do site e Telegram.
-- O app do atendente NÃO está publicado nas lojas: existe, em teste interno.
 - O WhatsApp roda via Z-API, um gateway NÃO-oficial. Não é "WhatsApp Business API oficial"
   nem "Cloud API".
 - NÃO existe rastreamento de abertura ou clique de mensagem.
