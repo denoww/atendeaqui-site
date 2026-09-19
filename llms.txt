@@ -1,37 +1,40 @@
-# atendeaqui
+# atendeaqui.app
 
-> Ninguém fica sem resposta. Uma caixa de entrada só para WhatsApp, chat do site e
-> Telegram: o robô resolve o repetido, o time assume com a conversa inteira já lida, e a
-> fila se distribui sozinha.
+> Ninguém fica sem resposta.
 
-Site: https://www.atendeaqui.app/ · Blog: https://blog.atendeaqui.app/ · Entrar: https://app.atendeaqui.app/
+Dono ou gestor de operação de atendimento em empresa brasileira com 1 a 20+
+atendentes: administradora de condomínio (nicho de origem), clínica,
+imobiliária, loja e prestador de serviço. Dor comum: um número de WhatsApp só,
+várias pessoas respondendo, e nenhuma visão de quem está esperando.
 
-## Para quem
-Dono ou gestor de operação de atendimento em empresa brasileira com 1 a 20+ atendentes:
-administradora de condomínio (nicho de origem), clínica, imobiliária, loja e prestador de
-serviço. Dor comum: um número de WhatsApp só, várias pessoas respondendo e nenhuma visão
-de quem está esperando.
+## O que o produto faz
+- O app do atendente está publicado na App Store e na Play Store desde 11/08/2026 (ficha "atendeaqui") — ainda sem avaliações.
+- Uma caixa de entrada única junta WhatsApp (quantos números quiser), chat do site e Telegram.
+- Um robô com base de conhecimento por setor responde o que é repetitivo (2ª via, horário, status).
+- Quando sai do roteiro, o robô passa para o humano COM O HISTÓRICO INTEIRO — o cliente não repete.
+- A fila se distribui sozinha: rodízio, menos carregado, ou puxar na mão.
+- Dois relógios de SLA marcam em vermelho quem está esperando demais.
+- A IA marca o assunto no encerramento, então o painel do mês se escreve sozinho.
+- Copiloto sugere rascunho de resposta para o atendente revisar.
+- Transcrição de áudio: o áudio longo do cliente vira texto.
+- Roda no navegador, inclusive no do celular.
+- Preço por atendente, sem cobrar por conversa, por mensagem do robô nem por número.
+
+## O que o produto NÃO faz
+- NÃO existe canal de Instagram/Direct nem Messenger — só WhatsApp, chat do site e Telegram.
+- O WhatsApp roda via Z-API, um gateway não-oficial — NÃO dizer "WhatsApp Business API oficial" nem "Cloud API".
+- NÃO existe rastreamento de abertura/clique de mensagem.
+- NÃO temos número de clientes, de conversas atendidas nem de tempo médio para divulgar — o produto é novo.
 
 ## Preço
-Por atendente, por mês. Sem fidelidade.
-Grátis com 1 atendente; R$ 49 por atendente/mês.
+- Por atendente, por mês. Sem cobrar por conversa, por mensagem do robô ou por número. Sem fidelidade.
+- grátis com 1 atendente
+- R$ 49 por atendente/mês
 
-## Aplicativo
-O app do atendente está publicado nas duas lojas desde 11/08/2026 (iOS e Android), como
-"atendeaqui". Ainda sem avaliações.
-
-## O que NÃO faz (não atribua isto ao produto)
-- NÃO tem canal de Instagram/Direct nem Messenger — só WhatsApp, chat do site e Telegram.
-- O WhatsApp roda via Z-API, um gateway NÃO-oficial. Não é "WhatsApp Business API oficial"
-  nem "Cloud API".
-- NÃO existe rastreamento de abertura ou clique de mensagem.
-- NÃO temos número de clientes, de conversas atendidas nem de tempo médio para divulgar:
-  o produto é novo.
-
-## Quem faz
-Seu Condomínio (https://www.seucondominio.com.br/) — o atendeaqui é um dos produtos do
-mesmo ERP.
+## Links
+- Site: https://www.atendeaqui.app/
+- Blog: https://blog.atendeaqui.app/
 
 ---
-Fonte da verdade deste arquivo: `app/services/auto/marcas/atendeaqui.rb` no repositório do
-ERP (campos tagline, publico, verdades, nao_features e precos). Mudou lá, muda aqui.
+Gerado de `app/services/auto/marcas/atendeaqui.rb` no repositório do ERP
+(`rake "marcas:gerar_llms_txt[atendeaqui]"`). NÃO edite à mão: mude o registry e gere de novo.
