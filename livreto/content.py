@@ -76,8 +76,9 @@ CAIXA = [
     ("A conversa cai sozinha",
      "Rodízio, menos carregado ou puxar na mão. Quem fica disponível recebe o que estava parado "
      "desde a madrugada.", ""),
-    ("Abre no navegador",
-     "Inclusive no do celular. Nada pra instalar, nada pra aprovar na loja.", ""),
+    ("Abre no navegador — ou no app",
+     "A caixa abre no navegador, inclusive no do celular. E quem prefere app tem o do atendente "
+     "na Google Play e na App Store.", ""),
 ]
 
 ROBO = [
@@ -171,10 +172,9 @@ NAO_FAZ = [
     ("O robô não resolve tudo",
      "Ele resolve o repetido; o resto vira conversa humana. Isso é decisão de produto, não "
      "limitação — robô que insiste faz o cliente repetir.", ""),
-    ("O app do atendente não está na loja",
-     "A caixa abre no navegador, inclusive no do celular. O aplicativo está pronto e já recebe "
-     "notificação, mas ainda não foi publicado — e enquanto não estiver na loja, ele não é "
-     "vendido aqui.", ""),
+    ("Saber se o cliente leu a mensagem",
+     "Não rastreamos abertura nem clique. O que a caixa registra é quem respondeu, quando, e "
+     "quanto tempo o cliente esperou — não o comportamento dele.", ""),
 
 ]
 

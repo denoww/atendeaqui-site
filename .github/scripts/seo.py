@@ -69,10 +69,16 @@ PROIBIDAS = [
     # natureza da integração — e é o que o cliente cobra quando descobre.
     ('WhatsApp Business API oficial',
      r'API\s+oficial|whatsapp\s+business\s+api\s+oficial|parceiro\s+oficial\s+d[ao]\s+(whatsapp|meta)'),
-    # Instagram/Direct e Messenger NÃO existem, e o app NÃO está publicado em loja.
-    ('canal ou app que não existe',
-     r'(atendemos|integra\w*|dispon[íi]vel)\s+(n[oa]\s+|com\s+)?(instagram|direct|messenger)'
-     r'|(baixe|baix[ae]r)\s+(o\s+)?app|dispon[íi]vel\s+na\s+(play\s+store|app\s+store)'),
+    # Instagram/Direct e Messenger NÃO existem.
+    #
+    # ⚠️ A metade "app na loja" desta regra foi REMOVIDA em 24/09/2026 — ela tinha vencido.
+    # O app do atendente foi publicado na App Store e na Play Store em 11/08/2026, e o guard
+    # seguia proibindo a copy CORRETA por mais seis semanas: o site dizia "o aplicativo está
+    # sendo feito", o livreto dizia "não está na loja", e nenhum dos dois podia ser consertado
+    # sem o CI reprovar. Guard de não-feature tem prazo de validade; quando a não-feature vira
+    # feature, a regra é que precisa sair.
+    ('canal que não existe',
+     r'(atendemos|integra\w*|dispon[íi]vel)\s+(n[oa]\s+|com\s+)?(instagram|direct|messenger)'),
     ('garantia absoluta',
      r'garantimos que|100%\s*(seguro|garantido|livre)|nunca\s+falha|zero\s+risco'),
     ('marcador de rascunho',
