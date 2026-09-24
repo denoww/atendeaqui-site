@@ -34,6 +34,7 @@ várias pessoas respondendo, e nenhuma visão de quem está esperando.
 ## Links
 - Site: https://www.atendeaqui.app/
 - Blog: https://blog.atendeaqui.app/
+- Perguntas antes de escolher: https://www.atendeaqui.app/perguntas-antes-de-escolher
 
 ---
 Gerado de `app/services/auto/marcas/atendeaqui.rb` no repositório do ERP
