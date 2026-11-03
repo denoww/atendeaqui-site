@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Livreto do atendeaqui — atendimento no WhatsApp</title>
-<meta name="description" content="Livreto do atendeaqui: WhatsApp, site e Telegram numa caixa só, com robô no repetido e copiloto de IA. R$ 49 por atendente/mês, grátis com 1.">
+<title>Livreto do atendeaqui — atendimento no WhatsApp numa caixa só</title>
+<meta name="description" content="Livreto do atendeaqui: WhatsApp, chat do site e Telegram numa caixa só. O robô resolve o repetido e passa o resto pro time com o histórico junto. Copiloto de IA, transcrição de áudio e painel. R$ 49 por atendente/mês, grátis com 1.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://www.atendeaqui.app/livreto/">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -212,6 +212,44 @@ img{display:block;max-width:100%}
   @page{size:A4;margin:14mm}
 }
 </style>
+<script>try{if(navigator.webdriver||/HeadlessChrome/.test(navigator.userAgent))window['ga-disable-G-6MP19GRPQ7']=true;}catch(e){}</script>
+<script>
+  // Opt-out de verdade: o botão em /privacidade grava esta chave. Precisa vir
+  // ANTES do gtag.js, senão a primeira medição já saiu.
+  try { if (localStorage.getItem('sem-analytics') === '1') window['ga-disable-G-6MP19GRPQ7'] = true; } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MP19GRPQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'granted'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-6MP19GRPQ7', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  document.addEventListener('click', function (e) {
+    var alvo = e.target;
+    if (!alvo || !alvo.closest) return;
+    var a = alvo.closest('a[href*="wa.me"]');
+    if (!a) return;
+    gtag('event', 'contato_whatsapp', {
+      pagina: location.pathname,
+      cta: a.className || 'sem-classe',
+      // De ONDE veio quem clicou. Medido em 17-18/09/2026: o lead destas marcas
+      // sai por wa.me e o clique e o lead nunca se cruzavam, entao nao dava pra
+      // dizer qual canal traz cliente. So o HOSTNAME: a URL inteira do referrer
+      // pode carregar termo de busca, que e dado de quem visita.
+      origem: (function () {
+        try { return document.referrer ? new URL(document.referrer).hostname : '(direto)'; }
+        catch (e) { return '(desconhecido)'; }
+      })()
+    });
+  });
+</script>
 </head>
 <body>
 <nav class="nav">
@@ -235,7 +273,7 @@ img{display:block;max-width:100%}
   <div class="cap-in">
     <div class="cap-head rev"><span class="eyebrow">A caixa</span><h2>Uma caixa, o time inteiro.</h2>
       <p class="lead">WhatsApp (quantos números você quiser), chat do site e Telegram caem no mesmo lugar. A conversa entra no setor certo e cai em quem está livre.</p></div>
-    <figure class="board c-verde rev"><figcaption class="board-cap"><span class="eyebrow">Como funciona</span><b>Da mensagem nova ao encerramento</b></figcaption><ol class="board-strip"><li class="bp"><span class="bp-n">1</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="18" height="12" rx="3"/><rect x="8" y="25" width="18" height="12" rx="3"/><rect x="32" y="17" width="16" height="12" rx="3"/><path d="M26 15h6M26 31h6"/></g></svg></span><b>Cai na fila</b><i>A conversa entra no setor certo — financeiro, comercial, suporte.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">2</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="22" r="5"/><path d="M28 17V8M28 27v9M23 22H10M33 22h13"/><circle cx="8" cy="22" r="2.5"/><circle cx="48" cy="22" r="2.5"/><circle cx="28" cy="6" r="2.5"/><circle cx="28" cy="38" r="2.5"/></g></svg></span><b>Cai em quem está livre</b><i>Rodízio, menos carregado ou puxar na mão. O time escolhe.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">3</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="22" r="13"/><path d="M28 14v8l6 3.5"/><path d="M28 3v4"/></g></svg></span><b>O relógio corre</b><i>Quem espera demais fica vermelho — antes de virar reclamação.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">4</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8 46 20 28 38 16 26 22 8Z" stroke-linejoin="round"/><circle cx="26" cy="14" r="2"/><path d="M8 30l6 6"/></g></svg></span><b>Encerra com assunto</b><i>A IA marca o assunto no fim. O painel do mês se escreve sozinho.</i></li></ol></figure><div class="fgrid c-coral rev"><article class="fc"><span class="fc-mk"></span><h3>Um número, uma caixa</h3><p>O WhatsApp que a sua empresa já usa vira a entrada. Não troca de número. Tem mais de um? Todos entram na mesma caixa, e o filtro por conta separa.</p></article><article class="fc"><span class="fc-mk"></span><h3>Três canais, a mesma tela</h3><p>WhatsApp (quantos números quiser), chat do site e Telegram. O atendente não pula de aplicativo — e o cliente não escolhe por onde falar.</p></article><article class="fc"><span class="fc-mk"></span><h3>Setores de verdade</h3><p>Financeiro, comercial, suporte. Cada setor tem seu time, sua forma de distribuir e seu tempo-alvo de resposta.</p></article><article class="fc"><span class="fc-mk"></span><h3>A conversa cai sozinha</h3><p>Rodízio, menos carregado ou puxar na mão. Quem fica disponível recebe o que estava parado desde a madrugada.</p></article><article class="fc"><span class="fc-mk"></span><h3>Abre no navegador</h3><p>Inclusive no do celular. Nada pra instalar, nada pra aprovar na loja.</p></article></div>
+    <figure class="board c-verde rev"><figcaption class="board-cap"><span class="eyebrow">Como funciona</span><b>Da mensagem nova ao encerramento</b></figcaption><ol class="board-strip"><li class="bp"><span class="bp-n">1</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="18" height="12" rx="3"/><rect x="8" y="25" width="18" height="12" rx="3"/><rect x="32" y="17" width="16" height="12" rx="3"/><path d="M26 15h6M26 31h6"/></g></svg></span><b>Cai na fila</b><i>A conversa entra no setor certo — financeiro, comercial, suporte.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">2</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="22" r="5"/><path d="M28 17V8M28 27v9M23 22H10M33 22h13"/><circle cx="8" cy="22" r="2.5"/><circle cx="48" cy="22" r="2.5"/><circle cx="28" cy="6" r="2.5"/><circle cx="28" cy="38" r="2.5"/></g></svg></span><b>Cai em quem está livre</b><i>Rodízio, menos carregado ou puxar na mão. O time escolhe.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">3</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="22" r="13"/><path d="M28 14v8l6 3.5"/><path d="M28 3v4"/></g></svg></span><b>O relógio corre</b><i>Quem espera demais fica vermelho — antes de virar reclamação.</i></li><li class="bp-arr" aria-hidden="true">→</li><li class="bp"><span class="bp-n">4</span><span class="bp-art"><svg class="scene" viewBox="0 0 56 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8 46 20 28 38 16 26 22 8Z" stroke-linejoin="round"/><circle cx="26" cy="14" r="2"/><path d="M8 30l6 6"/></g></svg></span><b>Encerra com assunto</b><i>A IA marca o assunto no fim. O painel do mês se escreve sozinho.</i></li></ol></figure><div class="fgrid c-coral rev"><article class="fc"><span class="fc-mk"></span><h3>Um número, uma caixa</h3><p>O WhatsApp que a sua empresa já usa vira a entrada. Não troca de número. Tem mais de um? Todos entram na mesma caixa, e o filtro por conta separa.</p></article><article class="fc"><span class="fc-mk"></span><h3>Três canais, a mesma tela</h3><p>WhatsApp (quantos números quiser), chat do site e Telegram. O atendente não pula de aplicativo — e o cliente não escolhe por onde falar.</p></article><article class="fc"><span class="fc-mk"></span><h3>Setores de verdade</h3><p>Financeiro, comercial, suporte. Cada setor tem seu time, sua forma de distribuir e seu tempo-alvo de resposta.</p></article><article class="fc"><span class="fc-mk"></span><h3>A conversa cai sozinha</h3><p>Rodízio, menos carregado ou puxar na mão. Quem fica disponível recebe o que estava parado desde a madrugada.</p></article><article class="fc"><span class="fc-mk"></span><h3>Abre no navegador — ou no app</h3><p>A caixa abre no navegador, inclusive no do celular. E quem prefere app tem o do atendente na Google Play e na App Store.</p></article></div>
   </div>
 </section>
 <section class="cap nevoa" id="robo" aria-label="Robô e humano">
@@ -277,7 +315,7 @@ img{display:block;max-width:100%}
   <div class="cap-in">
     <div class="cap-head rev"><span class="eyebrow">Honestidade</span><h2>O que a gente ainda não faz.</h2>
       <p class="lead">Todo material de software mostra só o que sabe fazer. Isto aqui é o que a caixa <b>não</b> resolve — melhor você saber agora do que na segunda semana.</p></div>
-    <div class="fgrid c-ambar rev"><article class="fc"><span class="fc-mk"></span><h3>Instagram e Messenger: ainda não</h3><p>Hoje são WhatsApp (quantos números você quiser), chat do site e Telegram. Se o seu atendimento vive no Direct, a caixa ainda não te serve.</p></article><article class="fc"><span class="fc-mk"></span><h3>O robô não resolve tudo</h3><p>Ele resolve o repetido; o resto vira conversa humana. Isso é decisão de produto, não limitação — robô que insiste faz o cliente repetir.</p></article><article class="fc"><span class="fc-mk"></span><h3>O app do atendente não está na loja</h3><p>A caixa abre no navegador, inclusive no do celular. O aplicativo está pronto e já recebe notificação, mas ainda não foi publicado — e enquanto não estiver na loja, ele não é vendido aqui.</p></article></div>
+    <div class="fgrid c-ambar rev"><article class="fc"><span class="fc-mk"></span><h3>Instagram e Messenger: ainda não</h3><p>Hoje são WhatsApp (quantos números você quiser), chat do site e Telegram. Se o seu atendimento vive no Direct, a caixa ainda não te serve.</p></article><article class="fc"><span class="fc-mk"></span><h3>O robô não resolve tudo</h3><p>Ele resolve o repetido; o resto vira conversa humana. Isso é decisão de produto, não limitação — robô que insiste faz o cliente repetir.</p></article><article class="fc"><span class="fc-mk"></span><h3>Saber se o cliente leu a mensagem</h3><p>Não rastreamos abertura nem clique. O que a caixa registra é quem respondeu, quando, e quanto tempo o cliente esperou — não o comportamento dele.</p></article></div>
   </div>
 </section>
 <section class="lineup" id="modulos">
@@ -298,7 +336,7 @@ img{display:block;max-width:100%}
   <div class="btns"><a class="btn" href="/livreto.pdf" download="livreto-atendeaqui.pdf">
     Baixar o livreto (PDF)</a></div>
 </section>
-<footer class="foot"><div class="foot-in"><span>atendeaqui · atendimento no WhatsApp para empresas · <a href="https://www.atendeaqui.app/privacidade">Privacidade</a></span><span>Livreto v30/07/2026 · bb012be</span></div></footer>
+<footer class="foot"><div class="foot-in"><span>atendeaqui · atendimento no WhatsApp para empresas · <a href="https://www.atendeaqui.app/privacidade">Privacidade</a></span><span>Livreto v03/11/2026 · d175710</span></div></footer>
 <script>
 (function(){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches){
