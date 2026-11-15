@@ -45,6 +45,18 @@ HERO = {
 
 CREDO = ('O cliente não repete nada. <span class="g">Nem para o robô, nem para o humano.</span>')
 
+# ---------------------------------------------------------------- vídeo (entra logo abaixo do credo)
+# Vídeo narrado de ~50 s, 16:9 no desktop e 9:16 no celular. Feito pelo motor de vídeo do ERP
+# (repo seucondominio: livreto/video/marca-atendeaqui/ + video_engine/), na marca do atendeaqui, e
+# hospedado na CDN do ERP. O roteiro só diz o que este livreto diz. Refez o vídeo? Rode lá
+# `bash livreto/video/render.sh marca-atendeaqui subir` e cole aqui o dict que ele imprime.
+VIDEO = {
+    "h":        "https://d8odo0nidtkh4.cloudfront.net/wysiwyg_sistema/images/2026/11/15/20/livreto-marca-atendeaqui-h-qih4qkzz.mp4",
+    "poster_h": "https://d8odo0nidtkh4.cloudfront.net/wysiwyg_sistema/images/2026/11/15/20/livreto-marca-atendeaqui-poster_h-qih4qkzz.jpg",
+    "v":        "https://d8odo0nidtkh4.cloudfront.net/wysiwyg_sistema/images/2026/11/15/20/livreto-marca-atendeaqui-v-qih4qkzz.mp4",
+    "poster_v": "https://d8odo0nidtkh4.cloudfront.net/wysiwyg_sistema/images/2026/11/15/20/livreto-marca-atendeaqui-poster_v-qih4qkzz.jpg",
+}
+
 # ---------------------------------------------------------------- storyboards
 BOARDS = {
     "bastao": ("coral", "A passagem de bastão que não faz o cliente recomeçar", [
